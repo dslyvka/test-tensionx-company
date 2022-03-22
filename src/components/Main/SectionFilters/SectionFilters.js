@@ -31,6 +31,11 @@ export default function SectionFilters() {
             </select>
           </li>
           <li>
+            <select name="" id="">
+              <option value="">All classes</option>
+            </select>
+          </li>
+          <li>
             <button>Clear All</button>
           </li>
         </ul>
