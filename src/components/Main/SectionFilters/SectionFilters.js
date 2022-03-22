@@ -1,9 +1,9 @@
-
+import { SectionFilters as SectionFiltersStyled} from './SectionFilters.styled';
 
 export default function SectionFilters() {
   return (
     <>
-      <section>
+      <SectionFiltersStyled>
         <ul>
           <li>
             <select name="" id="">
@@ -34,7 +34,7 @@ export default function SectionFilters() {
             <button>Clear All</button>
           </li>
         </ul>
-      </section>
+      </SectionFiltersStyled>
     </>
   );
 }
