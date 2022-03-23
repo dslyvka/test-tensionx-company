@@ -6,7 +6,7 @@ export const SectionTable = styled.section`
   padding-right: 40px;
   padding-top: 8px;
 
-  div {
+  .sectionTable {
     display: flex;
     justify-content: space-between;
     align-items: center;

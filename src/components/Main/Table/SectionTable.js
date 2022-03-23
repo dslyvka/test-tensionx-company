@@ -6,7 +6,7 @@ export default function SectionTable() {
   return (
     <>
       <Section>
-        <div>
+        <div className='sectionTable'>
           <h1>Students</h1>
           <input
             type="text"

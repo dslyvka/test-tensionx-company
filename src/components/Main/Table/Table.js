@@ -15,6 +15,18 @@ export default function Table() {
 
   const archivedStudents = students.slice(students.length - 2, students.length);
 
+  //   const [state, setstate] = useState(-1);
+  const [position, setPosition] = useState(-1);
+
+  const nestedTable = e => {
+    const pos = e.currentTarget.attributes.getNamedItem('data-position').value;
+    console.log(e.currentTarget);
+    console.log(e.target);
+    console.log(pos);
+    if (position == pos && e.currentTarget == e.target) return setPosition(-1);
+    setPosition(e.currentTarget.attributes.getNamedItem('data-position').value);
+  };
+
   return (
     <>
       <TableStyled>
@@ -35,7 +47,12 @@ export default function Table() {
         <tbody>
           {students.map((student, index) => {
             return (
-              <tr key={index}>
+              <tr
+                key={index}
+                onClick={nestedTable}
+                className="img"
+                data-position={index}
+              >
                 <td>
                   <input type="checkbox" name="" id="" />
                 </td>
@@ -75,6 +92,13 @@ export default function Table() {
                       }, '')
                     : 'No Parents Added'}
                 </td>
+                {position == index ? (
+                  <td className="nestedTable">
+                    <div>hello</div>
+                  </td>
+                ) : (
+                  <></>
+                )}
               </tr>
             );
           })}

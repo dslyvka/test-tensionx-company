@@ -108,7 +108,7 @@ export const TableStyled = styled.table`
       color: #db4437;
     }
 
-    tr {
+    tr.img {
       width: 100%;
       padding: 14px 0;
       display: inline-block;
@@ -170,6 +170,10 @@ export const TableStyled = styled.table`
       background-image: url(${info});
       background-repeat: no-repeat;
       background-position: left center;
+    }
+
+    .nestedTable {
+      display: block;
     }
   }
 `;
